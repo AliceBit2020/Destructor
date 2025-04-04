@@ -30,6 +30,8 @@ public:
 	int GetAge() const;
 	void SetAge(int ag);
 
+	void SetName(const char* nm);
+
 };
 
 
@@ -101,6 +103,20 @@ void Person::SetAge(int ag)
 {
 	if(ag>13)
 	age = ag;
+}
+
+void Person::SetName(const char* nm)
+{
+	if (name)
+		delete[] name;
+
+	int size = strlen(nm) + 1;
+	name = new char[size];
+
+	strcpy_s(name, size, nm);
+
+
+
 }
 
 
