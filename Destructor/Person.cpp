@@ -48,7 +48,7 @@ Person::~Person()
 }
 
 
-void Person::Output() const
+ inline void  Person::Output() const
 {
 	cout << "Name: " << name << endl;
 	cout << "Fisrt name: " << lastName << endl;
@@ -57,18 +57,18 @@ void Person::Output() const
 	cout << "Phone: " << phone << endl;
 }
 
-int Person::GetAge() const
+ inline int Person::GetAge() const
 {
 	return age;
 }
 
-void Person::SetAge(int ag)
+ inline void Person::SetAge(int ag)
 {
 	if (ag > 13)
 		age = ag;
 }
 
-void Person::SetName(const char* nm)
+ inline void Person::SetName(const char* nm)
 {
 	if (strlen(nm) >= 30)
 		return;
@@ -85,7 +85,7 @@ void Person::SetName(const char* nm)
 }
 
 
-const char* Person::GetName() const
+ inline const char* Person::GetName() const
 {
 	return name;
 }

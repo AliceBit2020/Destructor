@@ -19,18 +19,33 @@ inline void Output();/////  не відноситься до класу, при�
 int main()
 {
 	//cout << "C++ OOP" << endl;
+	for(int i =0; i<1;i++)
 	{
-		Person obj;//// unknown   Person()
-		obj.
+		
 
+		const Person obj;//// unknown   Person()
 		obj.Output();
-		//obj.SetAge(-1);
-
-
+		
 		Person me(100, "F", "Oleksandra", "Ternova", "222322");
-	}///me, obj destroyed
-	//me.Output();
+		me.Output();
+		me.SetAge(99);
+		me.SetName("Alice");
+		
 
+	}///me, obj destroyed
+
+
+	int sizeGr = 20;
+	Person** arrPerson = new Person*[sizeGr];
+
+	arrPerson[0] = new Person(100, "F", "Oleksandra", "Ternova", "222322");
+
+	for (int i = 0; i < sizeGr; i++)
+	{
+		delete[] arrPerson[i];
+	}
+
+	delete[] arrPerson;
 
 	//Output();
 

@@ -7,6 +7,7 @@ using namespace std;
 class Person {
 private:
 	int age;
+
 	char* mf;
 	char* name;
 	char* lastName;
@@ -18,7 +19,7 @@ public:
 
 	~Person();/////деструктор
 
-	void Output()const;
+	void Output() const;
 	int GetAge() const;
 	void SetAge(int ag);
 
