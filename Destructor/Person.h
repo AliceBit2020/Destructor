@@ -23,6 +23,7 @@ public:
 	void SetAge(int ag);
 
 	void SetName(const char* nm);
+	const char* GetName() const;
 
 };
 

@@ -83,3 +83,9 @@ void Person::SetName(const char* nm)
 
 
 }
+
+
+const char* Person::GetName() const
+{
+	return name;
+}
